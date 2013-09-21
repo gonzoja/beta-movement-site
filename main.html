@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+<!--
+body {
+	background-repeat: no-repeat;
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif, "Helvetica Neue";
+	margin: 0;
+	padding: 0;
+	min-width: 1024px;
+}
+
+/* ~~ Element/tag selectors ~~ */
+ul, ol, dl { /* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. Remember that what you do here will cascade to the .nav list unless you write a more specific selector. */
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 /* removing the top margin gets around an issue where margins can escape from their containing div. The remaining bottom margin will hold it away from any elements that follow. */
+	padding-right: 15px;
+	padding-left: 15px; /* adding the padding to the sides of the elements within the divs, instead of the divs themselves, gets rid of any box model math. A nested div with side padding can also be used as an alternate method. */
+}
+a img { /* this selector removes the default blue border displayed in some browsers around an image when it is surrounded by a link */
+	border: none;
+}
+
+/* ~~ Styling for your site's links must remain in this order - including the group of selectors that create the hover effect. ~~ */
+a:link {
+	color:#414958;
+	text-decoration: underline; /* unless you style your links to look extremely unique, it's best to provide underlines for quick visual identification */
+}
+a:visited {
+	color: #4E5869;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { /* this group of selectors will give a keyboard navigator the same hover experience as the person using a mouse. */
+	text-decoration: none;
+}
+
+/* ~~ this container surrounds all other divs giving them their percentage-based width ~~ */
+.container {
+	width:auto;
+	min-width: 1024px;
+	height:auto;
+	margin: auto;
+}
+.content {
+	width: 90%;
+	max-width: 1440px;/* a max-width may be desirable to keep this layout from getting too wide on a large monitor. This keeps line length more readable. IE6 does not respect this declaration. */
+	min-width: 780px;/* a min-width may be desirable to keep this layout from getting too narrow. This keeps line length more readable in the side columns. IE6 does not respect this declaration. */
+	background-color: transparent;
+	margin: auto; /* the auto value on the sides, coupled with the width, centers the layout. It is not needed if you set the .container's width to 100%. */
+	height: auto;	
+}
+
+.container-blue {
+	width: 100%;
+	min-width: 780px;/* a min-width may be desirable to keep this layout from getting too narrow. This keeps line length more readable in the side columns. IE6 does not respect this declaration. */
+	background-image: url('images/background_blue.png');
+	background-size: cover;
+	height: auto;
+}
+.container-light-grey {
+	width: 100%;
+	min-width: 780px;/* a min-width may be desirable to keep this layout from getting too narrow. This keeps line length more readable in the side columns. IE6 does not respect this declaration. */
+	background-image: url('images/background_grey.png');
+	background-size: cover;
+	height: auto;
+}
+
+
+.header {
+	padding: 10px 0;
+	height:100px;
+	background-image:url('images/banner.png');
+	background-size: cover;
+}
+
+.right {
+	position: absolute;
+	right:0px;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.centre {
+	position:absolute;
+	margin: auto
+	}
+
+/* ~~ This is the layout information. ~~ 
+
+1) Padding is only placed on the top and/or bottom of the div. The elements within this div have padding on their sides. This saves you from any "box model math". Keep in mind, if you add any side padding or border to the div itself, it will be added to the width you define to create the *total* width. You may also choose to remove the padding on the element in the div and place a second div within it with no width and the padding necessary for your design.
+
+
+/* ~~ The footer ~~ */
+.footer {
+	background-image: url('images/Footer.png');
+	background-size: cover;
+}
+
+/* ~~ miscellaneous float/clear classes ~~ */
+.fltrt {  /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: 8px;
+	margin-top: 8px;
+	margin-right: 8px;
+}
+.fltlft { /* this class can be used to float an element left in your page. The floated element must precede the element it should be next to on the page. */
+	float: left;
+	margin-right: 8px;
+	
+}
+.clearfloat { /* this class can be placed on a <br /> or empty div as the final element following the last floated div (within the #container) if the #footer is removed or taken out of the #container */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+
+.div_left{
+    float:left;
+    width:573px;
+}
+.div_middle {
+    overflow: hidden;
+}
+.div_right {
+	float:right;
+	width:459px
+	height:599px;
+}
+
+.slideshow {
+	position: relative;
+	width: 359px;
+	height: 599px;
+
+}
+.slideshow img {
+	position:absolute;
+	left:0;
+	top:0;
+	}
+	
+img.centred {
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
+-->
+</style>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="Scripts/fade.js"></script>
+
+</head>
+
+<body>
+	<div class="container">		
+		<div class="header">
+			<a href="#"><img src="images/Betamovement-logo1.png" alt="BetaMovement" name="logo" width="364" height="80" id="logo" style="" />
+			</a> 
+			<div class="fltrt">
+				<img src="images/Slogan.png" alt="slogan" name="slogan" width="573" height="59" id="slogan"/>
+			</div>
+		</div>
+
+		<div class="container-blue">
+			<div class="content">
+				<div class="div_left" margin>
+					<img src="images/intro.png" name="intro" width="668px" height="226px" >
+				</div>
+			
+				<div class="div_middle"/>
+				<div class="div_right">
+			      	<div class="slideshow" id="slideshow">
+			   			<img src="images/Screenshot_main.png"/>
+			   			<img src="images/Screenshot_map.png"/>
+			   			<img src="images/Screenshot_menu.png"/>
+			   		</div>
+		   		</div>
+			</div>
+		</div>
+		
+		<div class="container-light-grey">
+			<div class="content">				
+					<img class="centred" src="images/four_points.png"/>
+			</div>
+		</div>
+		<div class="footer">
+			<p>Footer</p>
+		</div>
+				<!-- end .container -->
+	</div>
+</body>
+</html>
