@@ -48,15 +48,17 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
 	margin: auto;
 }
 .content {
+	position:relative;
 	width: 90%;
 	max-width: 1440px;/* a max-width may be desirable to keep this layout from getting too wide on a large monitor. This keeps line length more readable. IE6 does not respect this declaration. */
-	min-width: 780px;/* a min-width may be desirable to keep this layout from getting too narrow. This keeps line length more readable in the side columns. IE6 does not respect this declaration. */
+	min-width: 922px;/* a min-width may be desirable to keep this layout from getting too narrow. This keeps line length more readable in the side columns. IE6 does not respect this declaration. */
 	background-color: transparent;
 	margin: auto; /* the auto value on the sides, coupled with the width, centers the layout. It is not needed if you set the .container's width to 100%. */
 	height: auto;	
 }
 
 .container-blue {
+	position:relative;
 	width: 100%;
 	min-width: 780px;/* a min-width may be desirable to keep this layout from getting too narrow. This keeps line length more readable in the side columns. IE6 does not respect this declaration. */
 	background-image: url('images/background_blue.png');
@@ -64,6 +66,7 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
 	height: auto;
 }
 .container-light-grey {
+	position:relative;
 	width: 100%;
 	min-width: 780px;/* a min-width may be desirable to keep this layout from getting too narrow. This keeps line length more readable in the side columns. IE6 does not respect this declaration. */
 	background-image: url('images/background_grey.png');
@@ -73,8 +76,9 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
 
 
 .header {
+	position:relative;
 	padding: 10px 0;
-	height:100px;
+	height:80px;
 	background-image:url('images/banner.png');
 	background-size: cover;
 }
@@ -124,12 +128,14 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
 .div_left{
     float:left;
     width:573px;
+    padding-top: 50px;
 }
 .div_middle {
     overflow: hidden;
+	float:left;
 }
 .div_right {
-	float:right;
+	float:left;
 	width:459px
 	height:599px;
 }
@@ -162,21 +168,18 @@ margin-right: auto;
 <body>
 	<div class="container">		
 		<div class="header">
-			<a href="#"><img src="images/Betamovement-logo1.png" alt="BetaMovement" name="logo" width="364" height="80" id="logo" style="" />
+			<a href="#"><img src="images/Betamovement-logo1.png" alt="BetaMovement" name="logo" width="364" height="80" id="logo" />
 			</a> 
-			<div class="fltrt">
-				<img src="images/Slogan.png" alt="slogan" name="slogan" width="573" height="59" id="slogan"/>
-			</div>
-		</div>
+			<img src="images/Slogan.png" alt="slogan" name="slogan" width="573" height="59" id="slogan"/>
+            </div>
 
 		<div class="container-blue">
 			<div class="content">
-				<div class="div_left" margin>
-					<img src="images/intro.png" name="intro" width="668px" height="226px" >
+				<div class="fltlft">
+					<img src="images/intro.png" name="intro" width="668px" height="226px" style="margin-top:100px;">
 				</div>
 			
-				<div class="div_middle"/>
-				<div class="div_right">
+				<div class="fltrt">
 			      	<div class="slideshow" id="slideshow">
 			   			<img src="images/Screenshot_main.png"/>
 			   			<img src="images/Screenshot_map.png"/>
@@ -187,8 +190,8 @@ margin-right: auto;
 		</div>
 		
 		<div class="container-light-grey">
-			<div class="content">				
-					<img class="centred" src="images/four_points.png"/>
+			<div class="content">
+				Test 123
 			</div>
 		</div>
 		<div class="footer">
