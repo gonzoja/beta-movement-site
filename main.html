@@ -7,7 +7,9 @@
 <!--
 body {
 	background-repeat: no-repeat;
-	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif, "Helvetica Neue";
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-weight: 300;
+	/*font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif, "Helvetica Neue";*/
 	margin: 0;
 	padding: 0;
 	min-width: 1024px;
@@ -42,41 +44,31 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
 
 /* ~~ this container surrounds all other divs giving them their percentage-based width ~~ */
 .container {
-	width:auto;
-	min-width: 1024px;
+	width:100%;
 	height:auto;
 	margin: auto;
 }
 .content {
 	position:relative;
 	width: 90%;
-	max-width: 1440px;/* a max-width may be desirable to keep this layout from getting too wide on a large monitor. This keeps line length more readable. IE6 does not respect this declaration. */
-	min-width: 922px;/* a min-width may be desirable to keep this layout from getting too narrow. This keeps line length more readable in the side columns. IE6 does not respect this declaration. */
-	background-color: transparent;
 	margin: auto; /* the auto value on the sides, coupled with the width, centers the layout. It is not needed if you set the .container's width to 100%. */
 	height: auto;	
 }
 
 .container-blue {
-	position:relative;
 	width: 100%;
-	min-width: 780px;/* a min-width may be desirable to keep this layout from getting too narrow. This keeps line length more readable in the side columns. IE6 does not respect this declaration. */
 	background-image: url('images/background_blue.png');
 	background-size: cover;
-	height: auto;
 }
 .container-light-grey {
-	position:relative;
-	width: 100%;
-	min-width: 780px;/* a min-width may be desirable to keep this layout from getting too narrow. This keeps line length more readable in the side columns. IE6 does not respect this declaration. */
+	width: auto;
 	background-image: url('images/background_grey.png');
 	background-size: cover;
-	height: auto;
 }
 
 
 .header {
-	position:relative;
+	width: 100%;
 	padding: 10px 0;
 	height:80px;
 	background-image:url('images/banner.png');
@@ -102,6 +94,7 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
 
 /* ~~ The footer ~~ */
 .footer {
+	width:100%;
 	background-image: url('images/Footer.png');
 	background-size: cover;
 }
@@ -127,37 +120,70 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
 
 .div_left{
     float:left;
-    width:573px;
     padding-top: 50px;
 }
 .div_middle {
     overflow: hidden;
-	float:left;
+    content: '.';
+    visibility: hidden;
+	display: block;
+	width:500px;
+	height:599px;
 }
 .div_right {
 	float:left;
-	width:459px
+	width:459px;
 	height:599px;
 }
 
 .slideshow {
 	position: relative;
-	width: 359px;
 	height: 599px;
 
 }
-.slideshow img {
-	position:absolute;
-	left:0;
-	top:0;
+.slideshow images {
+	position:relative;
 	}
+
+img.slideshowimg {
+	position:absolute;
+	top: 0px;
+	left: 0px;
+}
 	
 img.centred {
 display: block;
 margin-left: auto;
 margin-right: auto;
 }
+
+img.divider {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+text.heading{
+
+	font-size: 28px;
+	text-align: center;
+	margin: auto;
+	display: block;
+	color: #242d34;
+}
+
+text.body{
+	font-size: 18px;
+	text-align: center;
+	margin: auto;
+	display: block;
+	color: #242d34;
+
 -->
+}
+
 </style>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
@@ -167,31 +193,53 @@ margin-right: auto;
 
 <body>
 	<div class="container">		
+
 		<div class="header">
 			<a href="#"><img src="images/Betamovement-logo1.png" alt="BetaMovement" name="logo" width="364" height="80" id="logo" />
 			</a> 
-			<img src="images/Slogan.png" alt="slogan" name="slogan" width="573" height="59" id="slogan"/>
-            </div>
+			<img src="images/Slogan.png" alt="slogan" name="slogan" width="573" height="59" id="slogan" style="float:right; margin-top:10px;margin-right:8px"/>
+        </div>
 
 		<div class="container-blue">
-					<img src="images/intro.png" name="intro" width="668px" height="226px" style="margin-top:100px;float:left;">
-			
-              <div class="slideshow" id="slideshow" style="float:left;">
-                  <img src="images/Screenshot_main.png"/>
-                  <img src="images/Screenshot_map.png"/>
-                  <img src="images/Screenshot_menu.png"/>
-              </div>
+			<div class="content" >
+			<div style="width: 1024px;margin: 0 auto;">
+				<div style="width:600px;float:left;">
+					<img src="images/intro.png" name="intro" style="margin-top:100px;"/>
+					<img class="centred" src="images/Available-for.png" style="margin-top:50px;"/>
+				</div>
+	            <div class="slideshow" id="slideshow" style="float:left;">
+	                <img class="slideshowimg" src="images/Screenshot_main.png">
+	                <img class="slideshowimg" src="images/Screenshot_map.png">
+	                <img class="slideshowimg" src="images/Screenshot_menu.png">
+	            </div>
+            </div>
+            </div>
+            <div class="clearfloat">
 		</div>
-		
+	</div>
+
 		<div class="container-light-grey">
 			<div class="content">
-				Test 123
+				<text class="heading">Customized for your Cyclists</text><br/>
+				<text class="body">Our app is built to be skinned. Let us build a layout that matches your city’s aesthetic and brand. Logos and colour schemes are all made to match. Since we’re running on both iOS and Android, it’s available to over 92% of smartphone owners.</text>
+				<img class="divider" src="images/divider.png">
+				<text class="heading">Completely Anonymous Data</text><br/>
+				<text class="body">Collect anonymous, detailed surveys about cyclist demographics and usage characteristics filled out when cyclists first use the app. All metrics are linked to second-by-second GPS data with trip purpose specified, so no guesswork is needed.</text>
+				<img class="divider" src="images/divider.png">
+				<text class="heading">Process and Analyze Quickly</text><br/>
+				<text class="body">Data treatment is never fun. Our server tools run in the background to make sure that data is polished when it gets to the practitioner. Export data, graphs, and maps directly from our online tool to spend more time planning and less on spreadsheets.</text>
+				<img class="divider" src="images/divider.png">
+				<text class="heading">Participatory Urbanism Through Crowdsourcing</text><br/>
+				<text class="body">By sharing information mutually, everyone can help develop a better transportation system in their community. We believe in the power of citizen participation through crowdsourcing.</text>
 			</div>
 		</div>
+
 		<div class="footer">
-			<p>Footer</p>
+        		
+            </div>
 		</div>
-				<!-- end .container -->
+		<a href="mailto:inquiries@beta-movement.com?Subject=More%20Information" target="_top"">
+		<img src="images/contact.png" style="position:fixed;top:100px;right:100px"/>
 	</div>
 </body>
 </html>
